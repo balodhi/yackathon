@@ -8,11 +8,11 @@ import sys
 if(len(sys.argv) == 1):
 	print 'ERROR'
 
-target = open('mtl_data.json', 'w')
+target = open('waterloo_data.json', 'w')
 
 json_file = sys.argv[1]
 with open(json_file) as f:
 	for line in f:
-		if '"city": "Montr\u00e9al"' in line:
+		if '"city": "Waterloo"' in line:
 			print line
 			target.write(line)
